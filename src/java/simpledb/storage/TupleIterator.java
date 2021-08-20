@@ -26,7 +26,6 @@ public class TupleIterator implements OpIterator {
     public TupleIterator(TupleDesc td, Iterable<Tuple> tuples) {
         this.td = td;
         this.tuples = tuples;
-
         // check that all tuples are the right TupleDesc
         for (Tuple t : tuples) {
             if (!t.getTupleDesc().equals(td))
